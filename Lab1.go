@@ -186,7 +186,7 @@ func main() {
 	fmt.Scanln(&filename)
 
 	// Обрабатываем файл по частям, с ограничением горутин
-	names, profiles, err := processFileInChunks(filename, 10000, 6)
+	names, profiles, err := processFileInChunks(filename, 1000, 4)
 
 	fmt.Printf("Успешно прочитано %d белков.\n", len(names))
 	outputFile.WriteString(fmt.Sprintf("Успешно прочитано %d белков.\n", len(names)))
